@@ -1,0 +1,64 @@
+services:
+
+  postgres_db:
+    image: postgres:16
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_DB: reposteria
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init_db:/docker-entrypoint-initdb.d
+    networks:
+      - reposteria_net
+
+  django:
+    build: ./django_app
+    container_name: django_pasteleria
+    depends_on:
+      - postgres_db
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./django_app:/app
+    environment:
+      DB_NAME: reposteria
+      DB_USER: postgres
+      DB_PASSWORD: admin
+      DB_HOST: postgres_db
+      DB_PORT: 5432
+    networks:
+      - reposteria_net
+
+  angular_build:
+    build: ./pasteleria
+    container_name: angular_builder
+    volumes:
+      - ./pasteleria/dist/pasteleria/browser:/out
+    networks:
+      - reposteria_net
+
+  nginx:
+    image: nginx:latest
+    container_name: reposteria_nginx
+    depends_on:
+      - django
+      - angular_build
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./pasteleria/dist/pasteleria/browser:/usr/share/nginx/html
+    networks:
+      - reposteria_net
+
+networks:
+  reposteria_net:
+
+volumes:
+  postgres_data:
+

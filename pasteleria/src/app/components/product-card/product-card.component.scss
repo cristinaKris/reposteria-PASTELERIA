@@ -1,0 +1,52 @@
+@import '../../../styles.scss';
+
+.card {
+    padding: 16px;
+    align-items: center;
+    background-color: rgb(250, 250, 255);
+    border-radius: 2%;
+    box-shadow: 0 2px 2px 0 rgba(4, 6, 24, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: none;
+    margin: 5px;
+    width: 300px;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 550;
+  margin: 10px 0px 0px 0px ;
+}
+
+.price {
+  font-size: 20px;
+  margin: 0px 0px 10px 0px ;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  background-color: $rosa-morado;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.button:hover {
+  background-color: $rosa-fuerte;
+}
+.buttons i{
+  font-size: 20px;
+}
+
+img {
+  padding: 20px 0px ;
+  width: 250px;
+}
+

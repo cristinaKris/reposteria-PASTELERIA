@@ -1,0 +1,38 @@
+<!-- Sección superior dividida en dos -->
+<div class="about-hero">
+  <div class="about-text">
+    <h1>ABOUT US</h1>
+    <p>
+      Maison Sucrée: Donde cada dulce nace con alma.
+      Creado con arte, delicadeza y un toque de magia.
+    </p>
+  </div>
+
+  <div class="about-image">
+    <img src="assets/img/decoracion4.png" alt="Mesa de pasteles" />
+  </div>
+</div>
+
+<!-- Valores -->
+<section class="valores-section">
+  <h2>Valores</h2>
+
+  <div class="valores">
+    <div class="valor-card" *ngFor="let valor of valores">
+      <img [src]="valor.img" [alt]="valor.name" />
+      <p>{{ valor.name }}</p>
+    </div>
+  </div>
+</section>
+
+<div class="mision-vision">
+  <div class="mision">
+    <div class="mv-btn">MISIÓN</div>
+    <p>{{ misionText }}</p>
+  </div>
+
+  <div class="vision">
+    <div class="mv-btn">VISIÓN</div>
+    <p>{{ visionText }}</p>
+  </div>
+</div>

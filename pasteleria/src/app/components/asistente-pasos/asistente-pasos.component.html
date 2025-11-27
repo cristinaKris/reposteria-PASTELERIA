@@ -1,0 +1,35 @@
+
+<div class="stepper">
+  <div class="progress">
+    <div class="progress-bar" [style.width.%]="calcularProgreso()"></div>
+  </div>
+
+  <ng-container *ngFor="let p of pasos">
+    <div class="step-item"
+         (click)="desplazamiento && cambiarPaso(p.valor)"
+         [ngStyle]="{ cursor: desplazamiento ? 'pointer' : 'default' }">
+
+      <div class="paso-circulo"
+           [ngClass]="{
+              'activo': pasoActual === p.valor,
+              'deshabilitado': pasoActual !== p.valor && !desplazamiento,
+              'habilitado': pasoActual !== p.valor && desplazamiento
+           }">
+        {{ p.valor }}
+      </div>
+
+      <div class="paso-titulo"
+           [ngClass]="{
+              'activo': pasoActual === p.valor,
+              'inactivo': pasoActual !== p.valor
+           }">
+        {{ p.titulo }}
+      </div>
+
+    </div>
+  </ng-container>
+</div>
+<div class="step-content">
+  <ng-content></ng-content>
+</div>
+

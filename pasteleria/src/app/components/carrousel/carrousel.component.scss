@@ -1,0 +1,44 @@
+@import '../../../styles.scss';
+:host {
+  display: block;
+  width: 100%;
+}
+
+.carrousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 20px;
+}
+
+.scroll-container {
+  display: flex;
+  gap: 15px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  padding: 10px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  background: #afca57;
+  color: black;
+  
+  border: none;
+  border-radius: 20%;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+}
+.arrow:hover {
+  background: #92a84a;
+  color: white;
+}
+
+.arrow.left { left: 10px; }
+.arrow.right { right: 10px; }

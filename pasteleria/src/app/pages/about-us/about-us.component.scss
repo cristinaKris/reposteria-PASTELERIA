@@ -1,0 +1,113 @@
+@import '../../../styles.scss';
+
+/* ----- Sección ABOUT US arriba ----- */
+
+.about-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr; // mitad texto, mitad imagen
+  width: 100%;
+  min-height: 280px;
+}
+
+.about-text {
+  background-color: $rosa-morado; // morado del mockup (ajusta si tienes un color en variables)
+  color: white;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.about-text h1 {
+  font-size: 52px;
+  letter-spacing: 4px;
+  margin-bottom: 65px;
+  text-align: center;
+  transform: translateY(20px);
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.5;
+  max-width: 500px;
+  width: 100%;
+  //padding-top: 20px;
+  transform: translateY(20px);
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ----- Valores ----- */
+
+.valores-section {
+  padding: 60px 60px 60px;
+  text-align: center;
+}
+
+.valores-section h2 {
+  font-size: 45px;
+  margin-bottom: 55px;
+}
+
+.valores {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); // 5 iconos
+  gap: 100px;
+  align-items: start;
+}
+
+.valor-card {
+  text-align: center;
+}
+
+.valor-card img {
+  width: 200px;
+  height: 130px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.valor-card p {
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+/* ----- Mision y Vision ----- */
+.mv-btn {
+  background-color: $verde-claro;         // tu morado principal
+  color: $rosa-morado;
+  font-size: 26px;
+  letter-spacing: 2px;
+  font-weight: 450;
+  text-align: center;
+  padding: 15px 60px;
+  border-radius: 35px;
+  width: fit-content;
+  margin: 0 auto 40px auto;          // centra el botón
+  cursor: default;                   // para que NO parezca clickeable
+}
+
+.mision-vision {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 60px;
+  gap: 40px;
+  padding-bottom: 80px;
+}
+
+.mision, .vision {
+  width: 45%;
+  text-align: justify;
+}
+
+.mision p, .vision p {
+  line-height: 2;
+  font-size: 18px;
+  font-weight: 100px;
+}

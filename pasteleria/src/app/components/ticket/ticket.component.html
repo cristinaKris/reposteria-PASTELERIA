@@ -1,0 +1,40 @@
+<div id="ticketPDF" class="ticket-container">
+
+  <div class="ticket-header">
+    <h2> Ticket de compra</h2>
+    <p class="ticket-subtitle">Gracias por tu compra</p>
+  </div>
+
+  <div class="ticket-section">
+    <p><span>Pedido:</span> {{ data.pedido.idPedido }}</p>
+    <p><span> Fecha entrega:</span> {{ data.pedido.fechaEntrega }}</p>
+    <p><span> Hora:</span> {{ data.pedido.horaEntrega }}</p>
+    <p><span> Tipo entrega:</span> {{ data.pedido.tipoEntrega }}</p>
+    <p><span> Forma pago:</span> {{ data.pedido.formaPago }}</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <h3 class="productos-title"> Productos</h3>
+
+  <ul class="productos-list">
+    <li *ngFor="let p of data.pedido.productos">
+      <div class="prod-info">
+        <strong>{{ p.nombre }}</strong>
+        <small>{{ p.cantidad }} × ${{ p.precioUnitario }}</small>
+      </div>
+      <div class="prod-total">
+        ${{ p.cantidad * p.precioUnitario }}
+      </div>
+    </li>
+  </ul>
+
+  <div class="divider"></div>
+
+  <h2 class="total-final">Total: ${{ data.pedido.total }}</h2>
+</div>
+
+<div class="acciones">
+  <button mat-raised-button color="primary" (click)="descargarPDF()">Descargar PDF</button>
+  <button mat-stroked-button color="warn" (click)="cerrar()">Cerrar</button>
+</div>

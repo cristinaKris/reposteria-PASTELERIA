@@ -1,0 +1,74 @@
+@import '../../../styles.scss';
+
+$step-size: 50px;
+$progress-height: 6px;
+
+.stepper {
+  display: flex;                      
+  align-items: center;               
+  position: relative;                
+  margin-bottom: 5px;             
+}
+
+.stepper .progress {
+  position: absolute;
+  align-items: center;
+  width: 100%;
+  height: $progress-height;
+
+  .progress-bar {
+    height: 100%;
+    background-color: $rosa-fuerte;
+    border-radius: $progress-height;
+  }
+}
+
+
+.step-item {
+  text-align: center;
+  flex: 1;                                          // z-1
+  cursor: default;
+}
+
+.paso-circulo {
+  width: $step-size;
+  height: $step-size;
+  border-radius: 50%;
+  background: #e0e2e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  margin: 0 auto;
+}
+
+.paso-circulo.activo {
+  background: $rosa-morado;
+  color: white;
+  transform: scale(1.08);
+}
+
+.paso-circulo.habilitado {
+  background: $rosa-pastel;
+  color: black;
+  cursor: pointer;
+}
+
+.paso-circulo.deshabilitado {
+  opacity: 100%;
+}
+
+.paso-titulo {
+  font-size: 15px;
+  color: black;
+}
+
+.paso-titulo.activo {
+  color: $rosa-morado;
+  font-weight: 600;
+}
+
+.step-content {
+  padding: 1rem;                
+  background: #fff;
+}

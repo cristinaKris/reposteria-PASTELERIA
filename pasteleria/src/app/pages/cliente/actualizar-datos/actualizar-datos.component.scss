@@ -1,0 +1,51 @@
+@import '../../../../styles.scss';
+.registro-container {
+  width: 80%;
+  margin: 40px auto;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form-full {
+  grid-column: span 2;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 12px;
+  border-radius: 20px;
+  border: 2px solid black;
+  text-align: center;
+  font-size: 14px;
+}
+
+.btn-crear {
+  display: block;
+  width: 250px;
+  margin: 40px auto;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  background: $verde-claro;
+  font-weight: bold;
+  cursor: pointer;
+}

@@ -1,0 +1,50 @@
+
+
+<div class="hero-container">
+  <img class="principal-image" src="assets/img/decoracion1.png" alt="Imagen principal Home">
+  <h1 class="hero-title">Home</h1>
+</div>
+
+<div class="container">
+  <p><b>"ENDULZAMOS TUS MOMENTOS MÁS ESPECIALES"</b> </p>
+    <p> PASTELERÍA ARTESANAL CON INGREDIENTES NATURALES Y AMOR EN CADA DETALLE</p>
+</div>
+
+<div class="discount-banner">
+  <div class="text-content">
+  <h1>20% DESCUENTO</h1>
+  <p><b>¡En todos los pasteles de chocolate y algunos básicos más!</b></p>
+  <p>Válido del 24 de noviembre al 2 de diciembre y hasta agotar existencia</p>
+  <button class="btn-discount">DESCUENTO</button>
+  </div>
+    <img class="descuentoImag" src="assets/img/pastelitoRosa.png" alt="Ilustración">
+</div>
+
+<app-carrousel>
+  <div slideItem *ngFor="let producto of productosConDescuento">
+    <app-product-card
+      [name]="producto.name"
+      [price]="producto.price"
+      [descripcion]="producto.description"
+      [imagen]="producto.img"
+      >
+    </app-product-card>
+  </div>
+</app-carrousel>
+
+<div class="ShopNow">
+  <img src="assets/img/chocolateP.png" alt="Ilustración">
+  <div class="text-s">
+  <ul>
+    <li>Ingredientes naturales y sin conservadores.</li>
+    <li>Diseños personalizados para cada ocasión.</li>
+    <li>Entrega a domicilio con cuidado especial.</li>
+    <li>Pan y postres recién horneados todos los días.</li>
+  </ul>
+  <button class="btn-ShopNow" [routerLink]="'/catalogo'">Shop Now</button>
+  </div>
+</div>
+
+
+
+

@@ -1,0 +1,24 @@
+
+<!-- Genera una ventana emergente con el producto y sus detalles, 
+tienes que enviar el nombre, la descripción, el precio y la imagen
+Se usa como
+
+<app-ventana-producto 
+  [name]="producto.nombre" 
+  [description]="producto.descripcion" 
+  [price]="producto.precio" 
+  [image]="producto.imagen"
+  (close)="cerrarVentana()">    
+</app-ventana-producto> 
+
+-->
+<div class="encabezado">
+    <h1>{{name}}</h1>
+    <button class="button-close" (click)="onClose()">Close</button>
+</div>
+<div class="content">
+    <img [src]="image" alt="{{name}}" class="photo"/>
+    <p class="description">{{description}}</p>
+    <p class="price">Price: {{price}}</p>
+    <button (click)="addToCart()" class="add-btn">Add</button>
+</div>

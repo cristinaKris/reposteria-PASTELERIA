@@ -1,0 +1,28 @@
+<!-- Genera las card de cada Producto, tienes que enviar el nombre, la descripción el precio y la imagen
+Se usa 
+
+<app-product-card 
+  [name]="producto.nombre" 
+  [descripcion]="producto.descripcion" 
+  [price]="producto.precio" 
+  [imagen]="producto.imagen">
+</app-product-card> 
+
+-->
+
+
+<div class="card">
+    <img [src]="imagen" alt="{{name}}" class="image"> 
+    <p class="name">{{name}}<p>
+    <p class="price">${{price}}</p>
+    <div class="buttons">
+        <!-- <button class="button" (click)="seeProduct()" >See</button>
+        <button class="button" (click)="addToCart()" >Add</button> -->
+        <button class="button" (click)="addToCart()" >
+            <i class="bi bi-basket2"></i>
+        </button>
+        <button class="button" (click)="seeProduct()" >
+            <i class="bi bi-info-circle"></i>
+        </button>
+    </div>
+</div>

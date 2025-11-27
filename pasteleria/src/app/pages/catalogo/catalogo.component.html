@@ -1,0 +1,80 @@
+<div class="hero-container">
+  <img class="principal-image" src="assets/img/catalogo.png" alt="Tarta de Kiwi">
+  <h1 class="hero-title">Productos</h1>
+</div>
+
+<div class="container">
+    <p>Dscubre nuestras creaciones hechas con amor y los mejores ingredientes.<br>
+      <br>  Elige, combina y disfruta — ¡cada bocado es una fiesta de sabor!
+    </p>
+        <img src="assets/img/tiramisu.png" alt="Decoración">
+        <img src="assets/img/panes.png" alt="Hojas">
+        <img src="assets/img/pasteles.png" alt="Línea decorativa">
+</div>
+
+<h1>Tartas</h1>
+
+<app-carrousel>
+  <div slideItem *ngFor="let tarta of tartas">
+    <app-product-card
+      [id] = "tarta.id"
+      [type] = "1"
+      [name]="tarta.name"
+      [price]="tarta.price"
+      [descripcion]="tarta.description"
+      [imagen]="tarta.img"
+    >
+    </app-product-card>
+  </div>
+</app-carrousel>
+
+<h1>Panes</h1>
+<app-carrousel>
+  <div slideItem *ngFor="let pan of panes">
+    <app-product-card
+      [id] = "pan.id"
+      [type] = "2"
+      [name] = "pan.name"
+      [descripcion] = "pan.description"
+      [price] = "pan.price"
+      [imagen] = "pan.img"
+    >
+    </app-product-card>
+  </div>
+</app-carrousel>
+
+
+<h1>Postres</h1>
+<app-carrousel>
+  <div slideItem *ngFor="let postre of postres">
+    <app-product-card
+      [id] = "postre.id"
+      [type] = "2"
+      [name] = "postre.name"
+      [descripcion] = "postre.description"
+      [price] = "postre.price"
+      [imagen] = "postre.imagen"
+    >
+    </app-product-card>
+  </div>
+</app-carrousel>
+
+<div class="pasteles">
+  <h1>Pasteles</h1>
+  <button (click)="personalizar()" class="btn" type="button">
+    Personalizado
+  </button>
+</div>
+
+<app-carrousel>
+  <div slideItem *ngFor="let pastel of pasteles">
+    <app-product-card
+      [id] = "pastel.id"
+      [type] = "4"
+      [name] = "pastel.name"
+      [descripcion] = "pastel.description"
+      [price] = "pastel.price"
+      [imagen] = "pastel.img" 
+    ></app-product-card>
+  </div>
+</app-carrousel>

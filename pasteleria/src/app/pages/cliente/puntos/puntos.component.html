@@ -1,0 +1,21 @@
+<div class="puntos-page glass-container fade-in">
+  <h1 class="title">Programa de recompensas</h1>
+
+  <p class="subtitle">
+    ACUMULA PUNTOS POR TUS COMPRAS Y CANJÉALOS POR
+    <strong>DESCUENTOS</strong> O <strong>PRODUCTOS GRATIS</strong>
+  </p>
+
+  <div class="resumen reward-card slide-up">
+    <h2>Resumen</h2>
+    <ul>
+      <li><strong>Puntos actuales:</strong> {{ puntosActuales }}</li>
+      <li><strong>Saldo equivalente:</strong> ${{ saldoEquivalente }}</li>
+      <li><strong>Vigencia:</strong> {{ vigencia }}</li>
+    </ul>
+  </div>
+
+  <button class="btn-canjes glow-button" (click)="obtenerCodigo()">
+    Obtener código de canje
+  </button>
+</div>

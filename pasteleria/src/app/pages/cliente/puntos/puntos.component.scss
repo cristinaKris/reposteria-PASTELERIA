@@ -1,0 +1,119 @@
+@import '../../../../styles.scss';
+/* --- CONTENEDOR PRINCIPAL --- */
+.puntos-page {
+  max-width: 650px;
+  margin: 50px auto;
+  padding: 30px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Fondo transparente con estilo glassmorphism */
+.glass-container {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 1s ease-out;
+}
+
+/* --- TÍTULO --- */
+.title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #333;
+  animation: float 2s ease-in-out infinite;
+}
+
+/* --- SUBTÍTULO --- */
+.subtitle {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  padding: 0 10px;
+}
+
+/* --- TARJETA RESUMEN --- */
+.reward-card {
+  background: rgba(255, 255, 255, 0.35);
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  animation: slideUp 0.8s ease-out;
+  transition: transform 0.4s ease;
+}
+
+.reward-card:hover {
+  transform: translateY(-6px);
+}
+
+.reward-card h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.reward-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.reward-card li {
+  font-size: 16px;
+  margin: 8px 0;
+  color: #444;
+}
+
+/* --- BOTÓN --- */
+.btn-canjes {
+  background: $rosa-morado;
+  padding: 16px 25px;
+  border: none;
+  border-radius: 14px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Efecto glow */
+.glow-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(90, 222, 255, 0.6);
+}
+
+.glow-button:active {
+  transform: scale(0.97);
+}
+
+/* --- ANIMACIONES --- */
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.slide-up {
+  animation: slideUp 0.9s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}

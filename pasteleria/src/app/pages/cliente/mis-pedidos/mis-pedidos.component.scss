@@ -1,0 +1,40 @@
+.container {
+  padding: 40px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.tabla-pedidos {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.tabla-pedidos th {
+  background: #cfe09f;
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+  border: 2px solid #9fb76a;
+}
+
+.tabla-pedidos td {
+  padding: 14px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.star {
+  cursor: pointer;
+  font-size: 22px;
+  color: #ccc;
+  margin: 0 2px;
+  transition: 0.2s;
+}
+
+.star.filled {
+  color: #f4c542;
+}

@@ -1,0 +1,13 @@
+<app-navbar (openCliente)="abrirModalCliente()"></app-navbar>
+
+<!-- El router-outlet sigue igual -->
+<router-outlet></router-outlet>
+
+<!-- Agrega el modal global, pero oculto -->
+<app-cliente 
+  [isOpen]="isClienteModalOpen"
+  [isLoggedIn]="isLoggedIn"
+  (close)="closeClienteModal()"
+  (logout)="logoutCliente()">
+</app-cliente>
+
