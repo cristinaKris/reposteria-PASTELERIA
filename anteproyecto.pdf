@@ -1,0 +1,75 @@
+UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO
+FACULTAD DE INGENIERÍA
+INGENIERÍA EN COMPUTACIÓN
+SISTEMAS DISTRIBUIDOS
+SEMESTRE 2026 - 1
+PROFESOR:
+YASMINE MACEDO REZA
+_____________________________________
+Sistema Maison Sucrée
+____________________________________________________________
+EQUIPO :
+CASTILLO SOTO JACQUELINE
+ISIDRO CASTRO KAREN CRISTINA
+LOPEZ BETANCOURT MICHELLE
+LOPEZ GRANADOS AXEL JOSHUA
+GRUPO 2
+FECHA DE ENTREGA: 10 DE NOVIEMBRE DE 2025
+I. Título del sistema
+●
+Maison Sucrée
+II. Descripción
+Este proyecto pretende generar una base de datos en la cual se almacenen los productos de
+una pastelería, de la cual a partir de una interfaz gráfica, los clientes podrán consultar los
+pasteles disponibles, sus precios y realizar pedidos en línea de manera sencilla.
+El sistema estará compuesto por tres componentes principales: un servidor web con Nginx
+encargado de mostrar una interfaz gráfica y amigable con el usuario, un servidor de
+aplicación desarrollado con Flask que gestionará la lógica y las rutas de comunicación, y una
+base de datos que almacenará la información de productos, pedidos y clientes.
+Finalmente, todo el entorno funcionará dentro de contenedores Docker, lo que permitirá
+ejecutar los servicios de forma distribuida garantizando portabilidad y escalabilidad.
+III. Objetivo(s)
+●
+●
+●
+●
+●
+●
+Generar una base de datos estructurada en la cual se almacenen y administren los
+productos de la pastelería, sus precios y los pedidos realizados.
+Generar endpoints con Flask para interactuar con el sistema, es decir, gestionar la
+consulta de productos, disponibilidad y pedidos, de una forma segura, controlando a
+qué puede acceder el cliente.
+Generar una interfaz web que se comunique con Flask para permitir a los clientes
+interactuar con el sistema de una forma más amigable e intuitiva.
+Usar Docker para ejecutar los servicios en contenedores, de tal forma que el sistema
+funcione de manera distribuida.
+Garantizar persistencia y consistencia de datos, asegurando que los pedidos y
+actualizaciones de stock se reflejen correctamente en el sistema, por lo que cuál quier
+cambio sea visible para todos los clientes
+Optimizar la experiencia del usuario, ofreciendo una interfaz sencilla, atractiva y
+funcional para el proceso de consulta y pedido.
+IV . Alcances
+●
+●
+●
+●
+Los usuarios podrán consultar el catálogo de productos; de cada pastel se podrá ver el
+nombre, descripción, ingredientes, precio y disponibilidad.
+El sistema permitirá personalizar pedidos, seleccionando el tipo de pastel, tamaño,
+toppings y decoraciones adicionales.
+Permitir a los usuarios registrarse e iniciar sesión para guardar su historial de pedidos.
+Implementar un sistema de búsqueda y filtrado de productos por sabor, tamaño o
+precio.
+●
+●
+●
+●
+Se podrán realizar uno o varios pedidos, la disponibilidad de productos será
+actualizada en el sistema y estos cambios se reflejarán para futuros clientes.
+Implementar endpoints REST para manejar productos, pedidos y usuarios.
+Se implementarán endpoints REST para manejar películas, horarios, salas y
+reservaciones.
+Se tendrán tres contenedores correspondientes a Nginx (página web), Flask (para los
+endpoints y la API), y la base de datos (almacén de productos, pedidos y
+disponibilidad).
